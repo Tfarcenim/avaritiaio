@@ -2,13 +2,13 @@
 {
   "modid": "avaritiaio",
   "name": "Avaritia IO",
-  "description": "Adds crossmod integration between Avaritia and Ender IO.",
-  "version": "${1.0}",
-  "mcversion": "${1.12.2}",
+  "description": "Cross-mod integration between Avaritia and Ender IO.",
+	"version": "${version}",
+	"mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["Tfar"],
-  "credits": "Not sure",
+  "credits": "Many People",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

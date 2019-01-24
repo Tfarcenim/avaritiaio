@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "iii",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "type": "forge:ore_dict",
+      "ore": "dustBedrock"
+    }
+  },
+  "result": {
+    "item": "avaritiaio:grainblock",
+    "count": 1
+
+  }
+}

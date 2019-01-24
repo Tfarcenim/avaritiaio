@@ -13,8 +13,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = reference.MOD_ID, name = reference.NAME, version = reference.VERSION)
-
+@Mod(modid = reference.MOD_ID, name = reference.NAME, version = reference.VERSION,
+dependencies = reference.DEPENDENCIES, acceptedMinecraftVersions = reference.MC_VERSION)
 public class main {
     @Instance
     public static main instance;
@@ -41,6 +41,22 @@ public class main {
                             + "<grindingball name=\"Neutronium Ball\" grinding=\"1.00\" chance=\"5.00\" power=\"0.10\" durability=\"2000000\" >"
                             + "<item name=\"oredict:ballNeutronium\"/>"
                             +"</grindingball></recipes>");
+            FMLInterModComms.sendMessage("enderio", "recipe:xml",
+                    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><recipes>"
+                            + "<recipe name=\"Reverse Grain Block\" required=\"true\" disabled=\"false\"><crafting>"
+                            + "<grid size=\"1x1\">"
+                            + "<item name=\"avaritiaio:grainblock\"/>"
+                            + "</grid>"
+                            + "<output name=\"dustBedrock\" amount = \"9\"/>"
+                            +"</crafting></recipe></recipes>");
+            FMLInterModComms.sendMessage("enderio", "recipe:xml",
+                    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><recipes>"
+                            + "<recipe name=\"Sagmill: Infinity Powder\" required=\"true\">"
+                            + "<sagmilling energy=\"999999\" bonus=\"chance_only\">"
+                            + "<input name=\"minecraft:bedrock\"/>"
+                            + "<output name=\"minecraft:bedrock\" />"
+                            + "<output name=\"dustBedrock\" chance=\"1.0\" />"
+                            + "</sagmilling></recipe></recipes>");
         }
 
 
