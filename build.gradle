@@ -42,10 +42,17 @@ repositories {
     maven {
         name = "Jared"
         url = "http://maven.blamejared.com/"
+    }    
+    maven {
+        name = "Ender IO"
+        url = "https://maven2.tterrag.com/"
     }
 }
 dependencies {
-    
+   // deobfCompile "endercore:EnderCore:${mc_version}-0.5.43"
+    deobfCompile "com.enderio:EnderIO:${mc_version}-5.0.39"
+    compile "info.loenwind.autoconfig:AutoConfig:${mc_version}-1.0.1"
+
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"

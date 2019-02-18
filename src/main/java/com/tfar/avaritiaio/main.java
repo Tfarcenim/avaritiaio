@@ -43,14 +43,6 @@ public class main {
                             +"</grindingball></recipes>");
             FMLInterModComms.sendMessage("enderio", "recipe:xml",
                     "<?xml version=\"1.0\" encoding=\"UTF-8\"?><recipes>"
-                            + "<recipe name=\"Reverse Grain Block\" required=\"true\" disabled=\"false\"><crafting>"
-                            + "<grid size=\"1x1\">"
-                            + "<item name=\"avaritiaio:grainblock\"/>"
-                            + "</grid>"
-                            + "<output name=\"dustBedrock\" amount = \"9\"/>"
-                            +"</crafting></recipe></recipes>");
-            FMLInterModComms.sendMessage("enderio", "recipe:xml",
-                    "<?xml version=\"1.0\" encoding=\"UTF-8\"?><recipes>"
                             + "<recipe name=\"Sagmill: Infinity Powder\" required=\"true\">"
                             + "<sagmilling energy=\"999999\" bonus=\"chance_only\">"
                             + "<input name=\"minecraft:bedrock\"/>"

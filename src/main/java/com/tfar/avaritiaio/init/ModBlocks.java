@@ -10,5 +10,4 @@ import java.util.List;
 public class ModBlocks {
     public static final List<Block> BLOCKS = new ArrayList<Block>();
 
-    public static final Block GRAIN_BLOCK = new BlockBase("grainblock", Material.ROCK);
 }
