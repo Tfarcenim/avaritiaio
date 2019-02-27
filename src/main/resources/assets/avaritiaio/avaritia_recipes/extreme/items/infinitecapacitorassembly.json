@@ -1,7 +1,7 @@
 {
 	"type": "avaritia:shaped",
 	"result": {
-		"item": "avaritiaio:infinitecapacitorassembly",
+		"item": "avaritiaio:infinitycapacitor",
 		"count": 1
 	},
 	"pattern": [

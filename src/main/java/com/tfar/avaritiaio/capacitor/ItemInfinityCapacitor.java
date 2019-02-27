@@ -1,22 +1,25 @@
-package com.tfar.avaritiaio.items;
+package com.tfar.avaritiaio.capacitor;
 
-import com.tfar.avaritiaio.AvaritiaIO;
 import com.tfar.avaritiaio.init.ModItems;
+import com.tfar.avaritiaio.AvaritiaIO;
 import com.tfar.avaritiaio.util.IHasModel;
 import crazypants.enderio.api.capacitor.ICapacitorData;
 import crazypants.enderio.api.capacitor.ICapacitorKey;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 
 import javax.annotation.Nonnull;
 
-public class ItemBase extends Item implements IHasModel, ICapacitorData {
+public class ItemInfinityCapacitor extends ItemAvaritiaIOCapacitor implements IHasModel, ICapacitorData {
 
-    public ItemBase(String name) {
+
+
+    public ItemInfinityCapacitor(String name) {
         setTranslationKey(name);
         setRegistryName(name);
         setCreativeTab(CreativeTabs.MISC);
-        ModItems.ITEMS.add(this);    }
+        ModItems.ITEMS.add(this);
+}
+
     @Override
     public void registerModels() {
         AvaritiaIO.proxy.registerItemRenderer(this,0,"inventory");
@@ -24,7 +27,7 @@ public class ItemBase extends Item implements IHasModel, ICapacitorData {
 
     @Override
     public float getUnscaledValue(@Nonnull ICapacitorKey key) {
-        return 1f;
+        return 1.0f;
     }
 
     @Nonnull
@@ -38,4 +41,8 @@ public class ItemBase extends Item implements IHasModel, ICapacitorData {
     public String getLocalizedName() {
         return "none";
     }
+
 }
+
+
+

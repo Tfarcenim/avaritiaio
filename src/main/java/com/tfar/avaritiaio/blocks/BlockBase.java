@@ -1,8 +1,8 @@
 package com.tfar.avaritiaio.blocks;
 
+import com.tfar.avaritiaio.AvaritiaIO;
 import com.tfar.avaritiaio.init.ModBlocks;
 import com.tfar.avaritiaio.init.ModItems;
-import com.tfar.avaritiaio.main;
 import com.tfar.avaritiaio.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -22,6 +22,6 @@ public class BlockBase extends Block implements IHasModel {
 
     @Override
     public void registerModels() {
-        main.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+        AvaritiaIO.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 }
