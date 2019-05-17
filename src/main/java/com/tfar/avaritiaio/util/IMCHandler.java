@@ -1,4 +1,4 @@
-package com.tfar.avaritiaio.util.handlers;
+package com.tfar.avaritiaio.util;
 
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 

@@ -1,41 +1,26 @@
 package com.tfar.avaritiaio.items;
 
-import com.tfar.avaritiaio.AvaritiaIO;
 import com.tfar.avaritiaio.init.ModItems;
-import com.tfar.avaritiaio.util.IHasModel;
-import crazypants.enderio.api.capacitor.ICapacitorData;
-import crazypants.enderio.api.capacitor.ICapacitorKey;
-import net.minecraft.creativetab.CreativeTabs;
+import com.tfar.avaritiaio.util.Vars;
+import crazypants.enderio.base.EnderIOTab;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
 
-import javax.annotation.Nonnull;
+public class ItemBase extends Item {
 
-public class ItemBase extends Item implements IHasModel, ICapacitorData {
+    public String name;
+    public ResourceLocation registryName;
 
     public ItemBase(String name) {
-        setTranslationKey(name);
-        setRegistryName(name);
-        setCreativeTab(CreativeTabs.MISC);
-        ModItems.ITEMS.add(this);    }
-    @Override
-    public void registerModels() {
-        AvaritiaIO.proxy.registerItemRenderer(this,0,"inventory");
+        setCreativeTab(EnderIOTab.tabEnderIOMaterials);
+        ModItems.ITEMS.add(this);
+        this.name = name;
+        this.registryName = new ResourceLocation(Vars.MOD_ID, name);
     }
 
-    @Override
-    public float getUnscaledValue(@Nonnull ICapacitorKey key) {
-        return 1f;
-    }
-
-    @Nonnull
-    @Override
-    public String getUnlocalizedName() {
-        return "none";
-    }
-
-    @Nonnull
-    @Override
-    public String getLocalizedName() {
-        return "none";
+    public void registerModel() {
+        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
 }
