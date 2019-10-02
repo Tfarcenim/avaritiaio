@@ -3,6 +3,7 @@ package com.tfar.avaritiaio.capacitor;
 
 import com.enderio.core.common.CompoundCapabilityProvider;
 import crazypants.enderio.api.capacitor.CapabilityCapacitorData;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
@@ -12,11 +13,7 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-public class ItemInfinityCapacitor extends ItemAvaritiaIOCapacitor  {
-
-  public ItemInfinityCapacitor(String name) {
-    super(name);
-  }
+public class ItemInfinityCapacitor extends Item {
 
   @Nullable
   @Override
@@ -66,7 +63,7 @@ public class ItemInfinityCapacitor extends ItemAvaritiaIOCapacitor  {
       @Override
       public <T> T getCapability(@Nonnull Capability<T> capability, @Nullable EnumFacing facing) {
         if (capability == CapabilityCapacitorData.getCapNN()) {
-          return CapabilityCapacitorData.getCapNN().cast(AvaritiaIOCapacitorData.INFINITY_CAPACITOR);
+          return CapabilityCapacitorData.getCapNN().cast(AvaritiaIOCapacitorData.instance);
         }
         return null;
       }
